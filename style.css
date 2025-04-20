@@ -1,76 +1,154 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#input{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
+select {
+    justify-content: space-around;
     align-items: center;
-    background-color: #82c1c1;
-    color: rgb(0, 0, 0);
-    height: 10vh;
     padding: 1rem;
-    border-radius: 20px ;
-    border: none;
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid black;
     font-size: 20px;
-    font-weight: bolder;
+    width: 100%;
+    color: rgb(18, 18, 18);
+    font-weight: 900;
     font-family: 'Times New Roman', Times, serif;
 }
-body{
-    background-color: #b8b6b6;
+
+select>option{
+    font-size: 20px;
+    color: rgb(42, 41, 41);
+    font-weight: 900;
+    padding: 1rem;
+    background: transparent;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+select>option ::before{
+    content: "";
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    border-radius: 30px;
+    font-weight: 900;
+    padding: 1rem;
+    background-position: center;
+    opacity: 0.15; /* <-- control background opacity here */
+    z-index: -1;
+}
+body {
+
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background-position: fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.background {
+    
+    position: relative;
+    z-index: 1;
     height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     gap: 20px;
-    font-family: Arial, sans-serif;
+    background-position: fixed;
+    background-attachment: fixed;
+    background-size: cover;
 }
-form{
+
+body::before {
+    content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("/assets/images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7; /* <-- control background opacity here */
+  z-index: -1;
+}
+
+form {
     justify-content: center;
     align-items: center;
     border: 2px solid black;
     justify-items: center;
-    border-radius: 30px;
+    border-radius: 50px;
     width: 60vw;
     display: flex;
     flex-direction: column;
     gap: 20px;
     height: 50vh;
     padding: 30px;
+    position: relative;
+    z-index: 1;
+    background: transparent;
 }
-.btn{
-    background-color: #4CAF50; /* Green */
+form ::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    border-radius: 50px;
+    font-weight: 900;
+    background-position: center;
+    opacity: 0.25; /* <-- control background opacity here */
+    z-index: -1;
+}
+.btn {
+    background-color: #515351;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
-   
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 30px;
 }
-.Data{
-    width: 90%;
+
+.Data {
     display: flex;
     justify-content: center;
-    background-color: #ca6e6e;
-    color: white;
-    height: 80vh;
+    position: relative;
+    z-index: 1;
+    color: rgb(0, 0, 0);
     padding: 30px;
-    border-radius: 20px ;
     border: none;
+    text-shadow: 2 2 10px #020202;
     gap: 10px;
     font-size: 30px;
     flex-direction: column;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
 }
-h1,h3{
+.Data ::before{
+    content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  border-radius: 30px;
+  font-weight: 900;
+  background-position: center;
+  opacity: 0.15; /* <-- control background opacity here */
+  z-index: -1;
+}
+h1,
+h3 {
     color: #000000;
     font-weight: 800;
     font-family: 'Times New Roman', Times, serif;
