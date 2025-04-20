@@ -33,8 +33,8 @@ const getData = async () => {
             <p>The temperature in ${city} is ${data.current.temperature}°C</p>
             <p>The Wind Direction is: ${data.current.wind_dir}</p>
             <p>The Wind Speed is: ${data.current.wind_speed}</p>
-            <p>The Latitude is: ${data.location.latitude}</p>
-            <p>The Longitude is: ${data.location.longitude}</p>
+            <p>The Latitude is: ${data.location.lat}</p>
+            <p>The Longitude is: ${data.location.lon}</p>
             <p>The Local Time is: ${data.location.localtime}</p>
         `;
     } catch (error) {
