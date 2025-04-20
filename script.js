@@ -2,7 +2,7 @@ const input = document.querySelector("#input");
 const btn = document.querySelector(".btn");
 const api_key = `1abaef6b2e5f38e5e84efb3089360aa8`;
 let dataDiv;
-
+const proxy = "https://cors-anywhere.herokuapp.com/";
 const getData = async () => {
     console.log("Button clicked");
 
@@ -12,7 +12,7 @@ const getData = async () => {
         return;
     }
 
-    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
+    const newUrl = `${proxy}http://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
 
     try {
         const response = await fetch(newUrl);
