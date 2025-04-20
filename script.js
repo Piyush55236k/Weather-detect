@@ -12,7 +12,7 @@ const getData = async () => {
         return;
     }
 
-    const newUrl = `http://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
+    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
 
     try {
         const response = await fetch(newUrl);
