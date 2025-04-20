@@ -1,7 +1,9 @@
 const input = document.querySelector("#input");
 const btn = document.querySelector(".btn");
 const api_key = `1abaef6b2e5f38e5e84efb3089360aa8`;
+const api_key2=`f8ed52d0278c91608390b532e30e7b63`;
 let dataDiv;
+
 const getData = async () => {
     console.log("Button clicked");
 
@@ -11,7 +13,7 @@ const getData = async () => {
         return;
     }
 
-    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
+    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key2}&query=${city}`;
 
     try {
         const response = await fetch(newUrl);
@@ -33,8 +35,8 @@ const getData = async () => {
             <p>The temperature in ${city} is ${data.current.temperature}°C</p>
             <p>The Wind Direction is: ${data.current.wind_dir}</p>
             <p>The Wind Speed is: ${data.current.wind_speed}</p>
-            <p>The Latitude is: ${data.location.lat}</p>
-            <p>The Longitude is: ${data.location.lon}</p>
+            <p>The Latitude is: ${data.location.latitude}</p>
+            <p>The Longitude is: ${data.location.longitude}</p>
             <p>The Local Time is: ${data.location.localtime}</p>
         `;
     } catch (error) {

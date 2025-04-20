@@ -10,7 +10,7 @@
     background-color: #82c1c1;
     color: rgb(0, 0, 0);
     height: 10vh;
-    padding-left: 30px;
+    padding: 1rem;
     border-radius: 20px ;
     border: none;
     font-size: 20px;
@@ -18,7 +18,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 body{
-    background-color: #d8d6d6;
+    background-color: #b8b6b6;
     display: flex;
     justify-content: center;
     align-items: center;
