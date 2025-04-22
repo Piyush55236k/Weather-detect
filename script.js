@@ -1,8 +1,7 @@
 const input = document.querySelector("#input");
 const btn = document.querySelector(".btn");
 const output = document.querySelector(".output");
-const api_key = `1abaef6b2e5f38e5e84efb3089360aa8`;
-const api_key2=`f8ed52d0278c91608390b532e30e7b63`;
+const api_key = `ba7faed571de509c630e1b7f6b9beaf2`;
 let dataDiv;
 
 const getData = async () => {
@@ -14,7 +13,7 @@ const getData = async () => {
         return;
     }
 
-    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key2}&query=${city}`;
+    const newUrl = `https://api.weatherstack.com/current?access_key=${api_key}&query=${city}`;
 
     try {
         const response = await fetch(newUrl);
